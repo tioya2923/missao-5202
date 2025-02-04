@@ -1,0 +1,65 @@
+.sidebar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: rgb(248, 250, 252);
+  max-width: 70%;
+  margin: 0 auto;  
+  margin-top: 40px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  max-height: 600px;
+  width: 100%; /* Garantir que o contêiner ocupe toda a largura */
+  background-color: white;
+}
+
+.description {
+  flex: 1;
+  padding: 20px;
+}
+
+.image {
+  flex: 1;
+  position: relative; /* Adicionado para posicionar o texto sobre a imagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 100%;
+  max-width: 100%; /* Garantir que a imagem ocupe a largura total */
+  height: 100%; /* Garantir que todas as imagens tenham a mesma altura */
+  object-fit: cover; /* Cobrir toda a área do contêiner */
+}
+
+.image .text-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor legibilidade */
+  color: white;
+  padding: 10px;
+  max-width: 350px;
+  max-height: 350px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+  font-size: 1.5rem;
+  
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

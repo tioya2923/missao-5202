@@ -1,0 +1,107 @@
+/* Footer.css */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    background-color: #003059;
+    padding: 40px 0;
+    height: 500px;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Adicionado para permitir quebra de linha em telas menores */
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;  
+    flex-grow: 1;
+    padding: 20px;
+    font-size: large;
+    line-height: 2;
+    margin-top: 10px;
+    min-width: 200px; /* Largura mínima para evitar ficar muito estreito */
+    margin-bottom: 10px; /* Adicionado para espaçamento entre linhas em telas menores */
+}
+
+.footer-line {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.title-footer {
+    font-weight: bold;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.other-footers-links a {
+    font-weight: 400;
+    text-decoration: none; 
+    color: hsl(0, 40%, 98%);
+    margin: 5px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.address {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    left: 0;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    background-color: #2f17e65e; /* Cor de fundo do círculo */
+    border-radius: 50%; /* Torna o fundo um círculo */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho do ícone */
+    color: white; /* Cor do ícone */
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; /* Largura do círculo */
+    height: 20px; /* Altura do círculo */
+    text-decoration: none; 
+}
+
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
+
+/*
+@media (max-width: 480px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+        /*gap: 10px;
+        align-items: flex-start;
+    }
+}
+*/
+@media (max-width: 400px) {
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+}

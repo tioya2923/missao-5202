@@ -1,0 +1,118 @@
+.event-main {
+    background-color: #f6f4f4;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Espaçamento opcional abaixo do título */
+}
+
+.event-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Estica os itens para terem a mesma altura */
+    gap: 10px;
+    max-width: 70%;
+    margin: 20px auto 30px;
+}
+
+.event-large {
+    flex: 2; /* Diminuir a largura do evento principal */
+    max-width: 60%; /* Definir a largura máxima */
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Garantir que os filhos do evento grande sejam empilhados verticalmente */
+}
+
+.event-small-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    flex: 1; /* Faz com que o evento ocupe a altura disponível */
+    overflow: hidden; /* Garantir que o conteúdo não extravase os limites do contêiner */
+}
+
+.event-small {
+    width: 100%;
+    flex-direction: row-reverse;
+    /* Inverter a direção do flex para os eventos pequenos */
+}
+
+.event-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.event-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    /*white-space: nowrap;  Prevenir quebras de linha */    
+    overflow: hidden; /* Esconder texto excedente */
+    text-overflow: ellipsis; /* Adicionar reticências ao texto excedente */
+}
+
+.event-large .event-content {
+    align-items: start;
+    /* Alinhar o conteúdo do evento principal à esquerda */
+    text-align: left;
+   
+}
+
+.event-date,
+.event-time,
+.event-theme,
+.event-location {
+    margin: 5px 0;
+}
+
+.event-date,
+.event-time {
+    font-weight: bold;
+}
+
+.event-theme {
+    color: #2a9d8f;
+    font-size: 1.2em;
+}
+
+.mais-eventos-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.mais-eventos-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.mais-eventos-link:hover {
+    background-color: #0056b3;
+}

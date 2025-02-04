@@ -1,0 +1,11 @@
+/* Adicione ao seu CSS principal */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 150vh; /* Garante que a altura mínima seja 100% da altura da janela de visualização */
+    margin: 0;
+}
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço disponível */
+}
