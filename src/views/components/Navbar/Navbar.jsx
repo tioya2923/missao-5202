@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import logo from '../Logo/ispoc.png';
+import logo from '../Logo/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isEnsinoDropdownOpen, setIsEnsinoDropdownOpen] = useState(false);
+  const [isCatecismoDropdownOpen, setIsCatecismoDropdownOpen] = useState(false); // New state for Catecismo dropdown
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -27,6 +28,14 @@ const Navbar = () => {
     setIsEnsinoDropdownOpen(false);
   };
 
+  const handleCatecismoMouseEnter = () => {
+    setIsCatecismoDropdownOpen(true);
+  };
+
+  const handleCatecismoMouseLeave = () => {
+    setIsCatecismoDropdownOpen(false);
+  };
+
   return (
     <div className="navbar-container">
       <div className="navbar">
@@ -35,9 +44,6 @@ const Navbar = () => {
         </a>
         <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
           <div className="navbar-line">
-            <a href="#bibliotecas">Bibliotecas</a>
-            <a href="#ispoc-dit">ISPOC DIT</a>            
-            <a href="#loja-online">Loja Online</a>
             <input type="text" placeholder="Pesquisar..." />
           </div>
           <div className="navbar-line">
@@ -46,31 +52,29 @@ const Navbar = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="#o-ispoc">O ISPOC</a>
+              <a href="#arquidiocese-huambo">Arquidiocese do Huambo</a>
               {isDropdownOpen && (
                 <div className="dropdown">
                   <div className="dropdown-column">
-                    <a href="#apresentacao">Apresentação</a>
-                    <a href="#missao-visao-estrategia">Missão, Visão, Estratégia</a>
+                    <a href="#bispo-diocese">Bispo da Diocese</a>
+                    <a href="#bispos-emeritos">Bispos Eméritos</a>
+                    <a href="#clero">Clero</a>
+                    <a href="#curia-arquidiocesana">Cúria Arquidiocesana</a>
+                    <a href="#paroquias">Paróquias</a>
+                    <a href="#missoes">Missões</a>
+                    <a href="#boletim-arquidiocesano">Boletim Arquidiocesano</a>
+                  </div>
+                  <div className="dropdown-column">
+                    <a href="#seminarios">Seminários</a>
+                    <a href="#comunidades-religiosas">Comunidades Religiosas</a>
+                  </div>
+                  <div className="dropdown-column">
+                    <a href="#movimentos-apostolado">Movimentos de Apostolado</a>
+                    <a href="#associacoes-religiosas">Associações Religiosas</a>
+                  </div>
+                  <div className="dropdown-column">
+                    <a href="#escolas-catolicas">Escolas Católicas</a>
                     <a href="#historia">História</a>
-                    <a href="#organizacao">Organização</a>
-                    <a href="#entidades-associadas">Entidades Associadas</a>
-                    <a href="#comunicacoes-da-directoria">Comunicações da Directoria</a>
-                    <a href="#provedorias">Provedorias</a>
-                    <a href="#sistema-de-qualidade">Sistema de Qualidade</a>
-                    <a href="#documentacao-e-legislacao">Documentação e Legislação</a>
-                    <a href="#protecao-de-dados-pessoais">Proteção de Dados Pessoais</a>
-                    <a href="#actividade-editorial">Actividade Editorial</a>
-                  </div>
-                  <div className="dropdown-column">
-                    <a href="#noticias">Notícias</a>
-                    <a href="#eventos">Eventos</a>
-                  </div>
-                  <div className="dropdown-column">
-                    <a href="#revista">Revista</a>
-                  </div>
-                  <div className="dropdown-column">
-                    <a href="#calendario-academico">Calendário Académico</a>
                   </div>
                 </div>
               )}
@@ -80,25 +84,36 @@ const Navbar = () => {
               onMouseEnter={handleEnsinoMouseEnter}
               onMouseLeave={handleEnsinoMouseLeave}
             >
-              <a href="#ensino">Ensino</a>
+              <a href="#liturgia">Liturgia</a>
               {isEnsinoDropdownOpen && (
                 <div className="dropdown">
                   <div className="dropdown-column">
-                    <a href="#candidatura">Candidatura</a>
-                    <a href="#condicoes-de-acesso">Condições de Acesso</a>
-                    <a href="#provas-de-ingresso">Provas de Ingresso</a>
-                    <a href="#matriculas">Matrículas</a>
-                    <a href="#propinas">Propinas</a>
-                    <a href="#apoio-social-e-bolsas">Apoio Social e Bolsas</a>
-                    <a href="#faqs">FAQs</a>
-                  </div>             
-
+                    <a href="#calendario-liturgico">Calendário Litúrgico</a>
+                    <a href="#comentario-liturgia">Comentário à Liturgia</a>
+                    <a href="#lectio-divina">Lectio Divina</a>
+                    <a href="#canticos-pt">Cânticos em Português</a>
+                    <a href="#canticos-ub">Cânticos em Umbundu</a>
+                  </div>
                 </div>
               )}
             </div>
-            <a href="#crusos" className="navbar-line-two">Crusos</a>  
-            <a href="#e-servicos" className="navbar-line-two">E-Serviços</a>
-            <a href="#pesquisa-inovacao" className="navbar-line-two">Pesquisa e Inovação</a>
+            <div
+              className="navbar-line-two"
+              onMouseEnter={handleCatecismoMouseEnter}
+              onMouseLeave={handleCatecismoMouseLeave}
+            >
+              <a href="#catecismo">Catecismo</a>
+              {isCatecismoDropdownOpen && (
+                <div className="dropdown">
+                  <div className="dropdown-column">
+                    <a href="#catecismo-pt">Catecismo em Português</a>
+                    <a href="#catecismo-umbundu">Catecismo em Umbundu</a>
+                  </div>
+                </div>
+              )}
+            </div>
+            <a href="#e-servicos" className="navbar-line-two">Formação</a>
+            <a href="#pesquisa-inovacao" className="navbar-line-two">A MH</a>
             <a href="#contacto" className="navbar-line-two">Contacto</a>
           </div>
         </div>

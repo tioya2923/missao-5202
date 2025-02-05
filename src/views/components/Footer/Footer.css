@@ -2,7 +2,7 @@
 .footer-container {
     display: flex;
     justify-content: center;
-    background-color: #003059;
+    background-color: #020202ab;
     padding: 40px 0;
     height: 500px;
     bottom: 0;
@@ -52,6 +52,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.other-footers-links a:hover {  
+    color: #000;
+}
+
 .address {
     color: white;
     text-decoration: none;
@@ -64,7 +68,7 @@
 }
 
 .social-icons a {
-    background-color: #2f17e65e; /* Cor de fundo do círculo */
+    background-color: #3b3939; /* Cor de fundo do círculo */
     border-radius: 50%; /* Torna o fundo um círculo */
     padding: 10px; /* Espaçamento interno */
     font-size: 20px; /* Tamanho do ícone */

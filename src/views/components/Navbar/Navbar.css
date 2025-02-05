@@ -2,6 +2,7 @@
 .navbar-container {
     display: flex;
     justify-content: center;
+    background-color: #000;   
 }
 
 .navbar {
@@ -12,12 +13,14 @@
     align-items: center;
     padding: 10px;
     position: relative; /* Para alinhar o menu hambúrguer */
+   
 }
 
 .navbar-logo {
     display: flex;
     align-items: center;
     padding: 10px;
+    
 }
 
 .navbar-logo img {
@@ -32,23 +35,24 @@
     align-items: flex-end;
     flex-grow: 1;
     font-size: large;
+    
 }
 
 .navbar-line {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 10px;  
    
 }
 
 .navbar-line-two {
-    font-weight: bold;    
+    font-weight: bold;      
 }
 
 .navbar-line a {
     text-decoration: none;
-    color: #000;
-    margin: 0 10px;
+    color: #ffffff;
+    margin: 0 10px;    
 }
 
 .navbar-line input {
@@ -58,7 +62,7 @@
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 16px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;   
 }
 
 .navbar-line input:focus {
@@ -110,7 +114,8 @@
     width: 100%;  
     left: 0;
     right: 0;
-    background-color: #00000071;
+    background-color: #ffffff;
+    
     
    
 }
@@ -121,15 +126,16 @@
 }
 
 .dropdown-column a {
-    color: black;
     padding: 8px 16px;
     text-decoration: none;
     display: block;
-    color: #ffffff;
+    color: #000;
+    
 }
 
 .dropdown-column a:hover {
-    background-color: #aac4d2;
+    background-color: #2c2929;
+    color: #ffffff;
 }
 
 /* Responsividade */

@@ -8,36 +8,48 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer">
           <div className="footer-links">
-            <div className='title-footer'>Institucional</div>
+            <div className='title-footer'>Missão no Huamo</div>
             <div className='other-footers-links'><a href='#apresentacao'>Apresentação</a></div>
             <div className='other-footers-links'><a href='#noticias'>Notícias</a></div>
           </div>
           <div className="footer-links">
-            <div className='title-footer'>Ensino</div>
-            <div className='other-footers-links'><a href='#faculdades'>Faculdades</a></div>
-            <div className='other-footers-links'><a href='#escolas'>Escolas</a></div>
-            <div className='other-footers-links'><a href='#ensino'>Ensino</a></div>
-            <div className='other-footers-links'><a href='#cursos'>Cursos</a></div>
-            <div className='other-footers-links'><a href='#candidaturas'>Candidaturas</a></div>
-            <div className='other-footers-links'><a href='#porque-ispoc'>Porquê o ISPOC</a></div>
+            <div className='title-footer'>Arquidiocese do Huambo</div>
+            <div className='other-footers-links'><a href='#bispo-diocese'>Bispo da Diocese</a></div>
+            <div className='other-footers-links'><a href='#bispos-emeritos'>Bispos Eméritos</a></div>
+            <div className='other-footers-links'><a href='#clero'>Clero</a></div>
+            <div className='other-footers-links'><a href='curia-arquidiocesana'>Cúria Arquidiocesana</a></div>
+            <div className='other-footers-links'><a href='#paroquias'>Paróquias</a></div>
+            <div className='other-footers-links'><a href='#missoes'>Missões</a></div>
+            
           </div>
           <div className="footer-links">
-            <div className='title-footer'>Contactos</div>
-            <div className='other-footers-links'><a href='#institucionais'>Institucionais</a></div>
-            <div className='other-footers-links'><a href='#academicos'>Académicos</a></div>
+            <div className='title-footer'>Comunidade</div>
+            <div className='other-footers-links'><a href='#seminarios'>Seminários</a></div>
+            <div className='other-footers-links'><a href='#comunidades-religiosas'>Comunidades Religiosas</a></div>
+            <div className='other-footers-links'><a href='#movimentos-apostolado'>Movimentos de Apostolado</a></div>
+            <div className='other-footers-links'><a href='#associacoes-religiosas'>Associações Religiosas</a></div>
+            <div className='other-footers-links'><a href='#escolas-catolicas'>Escolas Católicas</a></div>
           </div>
           <div className="footer-links">
-            <div className='title-footer'>Ligações úteis</div>
-            <div className='other-footers-links'><a href='#e-servicos'>E-Serviços</a></div>
+            <div className='title-footer'>Liturgia</div>
+            <div className='other-footers-links'><a href='#calendario-liturgico'>Calendário Litúrgico</a></div>
+            <div className='other-footers-links'><a href='#comentario-liturgia'>Comentário à Liturgia</a></div>
+            <div className='other-footers-links'><a href='#lectio-divina'>Lectio Divina</a></div>
+            <div className='other-footers-links'><a href='#canticos-pt'>Cânticos em Português</a></div>
+            <div className='other-footers-links'><a href='#canticos-ub'>Cânticos em Umbundu</a></div>
           </div>
           <div className="footer-links">
-            <div className='title-footer'>Morada</div>
-            <div className='address'>Rua São Paulo II, Huambo, Angola</div>
+            <div className='title-footer'>Catecismo</div>
+            <div className='other-footers-links'><a href='#catecismo-pt'>Catecismo em Português</a></div>
+            <div className='other-footers-links'><a href='#catecismo-umbundu'>Catecismo em Umbundu</a></div>          
+          </div>
+          <div className="footer-links">
+            <div className='title-footer'>Contacto</div>            
             <div>
-              <a href="mailto:info@ispoc.ao" className='address'>info@ispoc.ao</a>
+              <a href="mailto:info@ispoc.ao" className='address'>info@mh.ao</a>
             </div>
             <div>
-              <a href="tel:+244945836101" className='address'>+244 945 836 101</a>
+              <a href="tel:+244945836101" className='address'>+244 943 448 081</a>
             </div>
           </div>
           <div className="footer-links">
