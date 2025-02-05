@@ -20,7 +20,6 @@ const Footer = () => {
             <div className='other-footers-links'><a href='curia-arquidiocesana'>Cúria Arquidiocesana</a></div>
             <div className='other-footers-links'><a href='#paroquias'>Paróquias</a></div>
             <div className='other-footers-links'><a href='#missoes'>Missões</a></div>
-            
           </div>
           <div className="footer-links">
             <div className='title-footer'>Comunidade</div>
@@ -67,9 +66,14 @@ const Footer = () => {
               <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-instagram" style={{ color: 'white', margin: '0 10px' }}></i>
               </a>
+              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-tiktok" style={{ color: 'white', margin: '0 10px' }}></i>
+              </a>
+              <a href="https://www.flickr.com/photos/fotosdamissaonohuambo/with/52264207612" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-flickr" style={{ color: 'white', margin: '0 10px' }}></i>
+              </a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
