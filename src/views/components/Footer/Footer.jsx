@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
           <div className="footer-links">
             <div className='title-footer'>Arquidiocese do Huambo</div>
-            <div className='other-footers-links'><a href='#bispo-diocese'>Bispo da Diocese</a></div>
+            <div className='other-footers-links'><a href='bispo-diocese'>Bispo da Diocese</a></div>
             <div className='other-footers-links'><a href='#bispos-emeritos'>Bispos Eméritos</a></div>
             <div className='other-footers-links'><a href='#clero'>Clero</a></div>
             <div className='other-footers-links'><a href='curia-arquidiocesana'>Cúria Arquidiocesana</a></div>
@@ -54,19 +54,19 @@ const Footer = () => {
           <div className="footer-links">
             <div className='title-footer'>Junte-se a nós</div>
             <div className='social-icons'>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/missaonohuambo/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-facebook-f" style={{ color: 'white', margin: '0 10px' }}></i>
               </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/miss%C3%A3o-no-huambo-135ba1247/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin-in" style={{ color: 'white', margin: '0 10px' }}></i>
               </a>
-              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@missaonohuambo5266" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-youtube" style={{ color: 'white', margin: '0 10px' }}></i>
               </a>
               <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-instagram" style={{ color: 'white', margin: '0 10px' }}></i>
               </a>
-              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.tiktok.com/@missaonohuambo" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-tiktok" style={{ color: 'white', margin: '0 10px' }}></i>
               </a>
               <a href="https://www.flickr.com/photos/fotosdamissaonohuambo/with/52264207612" target="_blank" rel="noopener noreferrer">

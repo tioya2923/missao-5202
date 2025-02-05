@@ -88,9 +88,17 @@ const Navbar = () => {
               {isEnsinoDropdownOpen && (
                 <div className="dropdown">
                   <div className="dropdown-column">
+
+
                     <a href="#calendario-liturgico">Calendário Litúrgico</a>
                     <a href="#comentario-liturgia">Comentário à Liturgia</a>
-                    <a href="#lectio-divina">Lectio Divina</a>
+                  </div>
+                  <div className="dropdown-column">
+                    <a href="#lectio-divina">Lectio Divina</a>              
+                    <a href="#santo-rosario">Santo Rosário</a>
+                  </div>
+
+                  <div className="dropdown-column">
                     <a href="#canticos-pt">Cânticos em Português</a>
                     <a href="#canticos-ub">Cânticos em Umbundu</a>
                   </div>
