@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="navbar">
-        <a href='#/home' className='navbar-logo'>
+        <a href='/' className='navbar-logo'>
           <img src={logo} alt="Logo" />
         </a>
         <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
@@ -90,8 +90,8 @@ const Navbar = () => {
                   <div className="dropdown-column">
 
 
-                    <a href="#calendario-liturgico">Calendário Litúrgico</a>
-                    <a href="#comentario-liturgia">Comentário à Liturgia</a>
+                    <a href="/Calendario">Calendário Litúrgico</a>
+                    <a href="/ComentarioLiturgico">Comentário à Liturgia</a>
                   </div>
                   <div className="dropdown-column">
                     <a href="#lectio-divina">Lectio Divina</a>              

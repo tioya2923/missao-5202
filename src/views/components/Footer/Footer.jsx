@@ -10,7 +10,8 @@ const Footer = () => {
           <div className="footer-links">
             <div className='title-footer'>Missão no Huamo</div>
             <div className='other-footers-links'><a href='#apresentacao'>Apresentação</a></div>
-            <div className='other-footers-links'><a href='#noticias'>Notícias</a></div>
+            <div className='other-footers-links'><a href='TodasNoticias'>Notícias</a></div>
+            <div className='other-footers-links'><a href='TodosEventos'>Eventos</a></div>
           </div>
           <div className="footer-links">
             <div className='title-footer'>Arquidiocese do Huambo</div>
@@ -40,10 +41,10 @@ const Footer = () => {
           <div className="footer-links">
             <div className='title-footer'>Catecismo</div>
             <div className='other-footers-links'><a href='#catecismo-pt'>Catecismo em Português</a></div>
-            <div className='other-footers-links'><a href='#catecismo-umbundu'>Catecismo em Umbundu</a></div>          
+            <div className='other-footers-links'><a href='#catecismo-umbundu'>Catecismo em Umbundu</a></div>
           </div>
           <div className="footer-links">
-            <div className='title-footer'>Contacto</div>            
+            <div className='title-footer'>Contacto</div>
             <div>
               <a href="mailto:info@ispoc.ao" className='address'>info@mh.ao</a>
             </div>
@@ -56,6 +57,9 @@ const Footer = () => {
             <div className='social-icons'>
               <a href="https://www.facebook.com/missaonohuambo/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-facebook-f" style={{ color: 'white', margin: '0 10px' }}></i>
+              </a>
+              <a href="https://zeno.fm/radio/radiomissio-ide-e-anunciai" target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-broadcast-tower" style={{ color: 'white', margin: '0 10px' }}></i>
               </a>
               <a href="https://www.linkedin.com/in/miss%C3%A3o-no-huambo-135ba1247/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin-in" style={{ color: 'white', margin: '0 10px' }}></i>

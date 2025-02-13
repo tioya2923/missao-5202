@@ -16,7 +16,7 @@ const EventList = ({ events }) => {
       <h2 className="title-h2">Eventos</h2>
       <div className="event-list">
         <div className="event-large">
-          <div className="event">
+          <Link to={`/evento/${sortedEvents[0].id}`} className="event">
             <img src={sortedEvents[0].image} alt={sortedEvents[0].theme} className="event-image" />
             <div className="event-content">
               <div className="event-date">{sortedEvents[0].date}</div>
@@ -24,17 +24,19 @@ const EventList = ({ events }) => {
               <div className="event-theme">{sortedEvents[0].theme}</div>
               <div className="event-location">{sortedEvents[0].location}</div>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="event-small-container">
           {sortedEvents.slice(1, 3).map((event, index) => (
-            <div className="event event-small" key={index}>
-              <div className="event-content">
-                <div className="event-date">{event.date}</div>
-                <div className="event-time">{event.time}</div>
-                <div className="event-theme">{event.theme}</div>
-                <div className="event-location">{event.location}</div>
-              </div>
+            <div key={index}>
+              <Link to={`/evento/${event.id}`} className="event event-small">
+                <div className="event-content">
+                  <div className="event-date">{event.date}</div>
+                  <div className="event-time">{event.time}</div>
+                  <div className="event-theme">{event.theme}</div>
+                  <div className="event-location">{event.location}</div>
+                </div>
+              </Link>
             </div>
           ))}
         </div>

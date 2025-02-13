@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { sidebars } from '../../Datas/sidebarData'; // Importa os dados
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = () => {
@@ -25,10 +26,10 @@ const Sidebar = () => {
     <div className="sidebar">
       <button onClick={handlePrevClick}>&lt;</button>
       <div className="content">        
-        <div className="image">
+        <Link to={sidebars[currentIndex].link} className="image">
           <img src={sidebars[currentIndex].image} alt="Descrição da Imagem" />
           <div className="text-overlay">{sidebars[currentIndex].description}</div>
-        </div>
+        </Link>
       </div>
       <button onClick={handleNextClick}>&gt;</button>
     </div>
