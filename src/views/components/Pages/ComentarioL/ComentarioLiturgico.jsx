@@ -13,7 +13,7 @@ const ComentarioLiturgico = () => {
 
   return (
     <div className="comentario-liturgico">
-      <h2 className="titulo-centralizado">Comentários Litúrgicos</h2>
+      <h2 className="titulo-centralizado">Comentários à Liturgia da Palavra</h2>
       <div className="pdf-grid">
         {sortedPdfFiles.map((file) => (
           <PdfItem key={file.id} file={file} />

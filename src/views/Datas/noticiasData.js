@@ -60,5 +60,15 @@ export const noticias = [
     textoCompleto: 'Este é o texto completo da notícia 6. Aqui você pode adicionar todo o conteúdo detalhado da notícia, com todas as informações e detalhes que deseja compartilhar.',
     data: '22/01/2025',
     link: '/noticia6'
+  },
+  {
+    id: createSlug('Ressuscita Henrique'),
+    imagem: 'https://santacasasp.org.br/wp-content/uploads/2021/02/santacasaantiga.png',
+    titulo: 'ALELUIA',
+    subtitulo: 'ERA MUITO QUERIDO POR NÓS',
+    textoBreve: 'Texto breve da notícia 6... ATÉ ATRASOU MORRER',
+    textoCompleto: '.... FKDJHJDFIJFDHFIJHUFIIUFDHFBD Este é o texto completo da notícia 6. Aqui você pode adicionar todo o conteúdo detalhado da notícia, com todas as informações e detalhes que deseja compartilhar.',
+    data: '14/02/2025',
+    link: '/noticia6'
   }
 ];

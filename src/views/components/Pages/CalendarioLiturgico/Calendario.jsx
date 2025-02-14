@@ -1,6 +1,8 @@
 // Calendario.js
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import { datasLiturgicas } from '../../../Datas/datasLiturgicas';
+import AdicionarEvento from './AdicionarEvento';
 import './Calendario.css';
 
 const diasDaSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
@@ -9,7 +11,6 @@ const Calendario = () => {
   const [mesAtual, setMesAtual] = useState(new Date().getMonth());
   const [anoAtual, setAnoAtual] = useState(new Date().getFullYear());
   const [novosEventos, setNovosEventos] = useState([]);
-  const [novoEvento, setNovoEvento] = useState({ data: '', evento: '', pais: '' });
 
   const obterDiasDoMes = (mes, ano) => {
     const data = new Date(ano, mes, 1);
@@ -23,15 +24,8 @@ const Calendario = () => {
     return dias;
   };
 
-  const adicionarEvento = (e) => {
-    e.preventDefault();
-    setNovosEventos([...novosEventos, novoEvento]);
-    setNovoEvento({ data: '', evento: '', pais: '' });
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setNovoEvento({ ...novoEvento, [name]: value });
+  const adicionarEvento = (evento) => {
+    setNovosEventos([...novosEventos, evento]);
   };
 
   const diasDoMes = obterDiasDoMes(mesAtual, anoAtual);
@@ -73,74 +67,53 @@ const Calendario = () => {
   const semanasDoMes = organizarDiasPorSemana(diasDoMes);
 
   return (
-    <div className="calendario-container">
-      <h1>Calendário Litúrgico Católico</h1>
-      <div className="navegacao">
-        <button onClick={mesAnterior}>Mês Anterior</button>
-        <span>{`${anoAtual}-${mesAtual + 1}`}</span>
-        <button onClick={proximoMes}>Próximo Mês</button>
-      </div>
-      <table className="calendario">
-        <thead>
-          <tr>
-            {diasDaSemana.map((dia, index) => (
-              <th key={index}>{dia}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {semanasDoMes.map((semana, index) => (
-            <tr key={index}>
-              {semana.map((dia, diaIndex) => (
-                <td key={diaIndex}>
-                  {dia && (
-                    <>
-                      <strong>{dia.getDate()}</strong>
-                      <div>
-                        {[...datasLiturgicas, ...novosEventos]
-                          .filter(
-                            item =>
-                              new Date(item.data).toDateString() === dia.toDateString()
-                          )
-                          .map((evento, i) => (
-                            <div key={i}>{evento.evento} ({evento.pais})</div>
-                          ))}
-                      </div>
-                    </>
-                  )}
-                </td>
+    
+      <div className="calendario-container">
+        <h1>Calendário Litúrgico Católico</h1>
+        <div className="navegacao">
+          <button onClick={mesAnterior}>Mês Anterior</button>
+          <span>{`${anoAtual}-${mesAtual + 1}`}</span>
+          <button onClick={proximoMes}>Próximo Mês</button>
+          
+        </div>
+        <table className="calendario">
+          <thead>
+            <tr>
+              {diasDaSemana.map((dia, index) => (
+                <th key={index}>{dia}</th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <form onSubmit={adicionarEvento}>
-        <input
-          type="date"
-          name="data"
-          value={novoEvento.data}
-          onChange={handleInputChange}
-          required
-        />
-        <input
-          type="text"
-          name="evento"
-          value={novoEvento.evento}
-          onChange={handleInputChange}
-          placeholder="Evento"
-          required
-        />
-        <input
-          type="text"
-          name="pais"
-          value={novoEvento.pais}
-          onChange={handleInputChange}
-          placeholder="País"
-          required
-        />
-        <button type="submit">Adicionar Evento</button>
-      </form>
-    </div>
+          </thead>
+          <tbody>
+            {semanasDoMes.map((semana, index) => (
+              <tr key={index}>
+                {semana.map((dia, diaIndex) => (
+                  <td key={diaIndex}>
+                    {dia && (
+                      <>
+                        <strong>{dia.getDate()}</strong>
+                        <div>
+                          {[...datasLiturgicas, ...novosEventos]
+                            .filter(
+                              item =>
+                                new Date(item.data).toDateString() === dia.toDateString()
+                            )
+                            .map((evento, i) => (
+                              <div key={i}>{evento.evento} ({evento.pais})</div>
+                            ))}
+                        </div>
+                      </>
+                    )}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        
+      </div>
+   
   );
 };
 
