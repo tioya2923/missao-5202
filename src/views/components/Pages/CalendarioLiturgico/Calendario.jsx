@@ -1,8 +1,6 @@
-// Calendario.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import { datasLiturgicas } from '../../../Datas/datasLiturgicas';
-import AdicionarEvento from './AdicionarEvento';
+import { useEventos } from './EventosContext';
 import './Calendario.css';
 
 const diasDaSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
@@ -10,22 +8,16 @@ const diasDaSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
 const Calendario = () => {
   const [mesAtual, setMesAtual] = useState(new Date().getMonth());
   const [anoAtual, setAnoAtual] = useState(new Date().getFullYear());
-  const [novosEventos, setNovosEventos] = useState([]);
+  const { eventos } = useEventos();
 
   const obterDiasDoMes = (mes, ano) => {
     const data = new Date(ano, mes, 1);
     const dias = [];
-
     while (data.getMonth() === mes) {
       dias.push(new Date(data));
       data.setDate(data.getDate() + 1);
     }
-
     return dias;
-  };
-
-  const adicionarEvento = (evento) => {
-    setNovosEventos([...novosEventos, evento]);
   };
 
   const diasDoMes = obterDiasDoMes(mesAtual, anoAtual);
@@ -59,61 +51,62 @@ const Calendario = () => {
     while (semana.length < 7) {
       semana.push(null); // Preenche o fim da semana com null
     }
-    semanas.push(semana);
 
+    semanas.push(semana);
     return semanas;
   };
 
   const semanasDoMes = organizarDiasPorSemana(diasDoMes);
 
   return (
-    
-      <div className="calendario-container">
-        <h1>Calendário Litúrgico Católico</h1>
-        <div className="navegacao">
-          <button onClick={mesAnterior}>Mês Anterior</button>
-          <span>{`${anoAtual}-${mesAtual + 1}`}</span>
-          <button onClick={proximoMes}>Próximo Mês</button>
-          
-        </div>
-        <table className="calendario">
-          <thead>
-            <tr>
-              {diasDaSemana.map((dia, index) => (
-                <th key={index}>{dia}</th>
+    <div className="calendario-container">
+      <h1> Actividades Episcopais e Calendário Litúrgico</h1>
+      <div className="navegacao">
+        <button onClick={mesAnterior}>Mês Anterior</button>
+        <span>{`${anoAtual}-${mesAtual + 1}`}</span>
+        <button onClick={proximoMes}>Próximo Mês</button>
+      </div>
+      <table className="calendario">
+        <thead>
+          <tr>
+            {diasDaSemana.map((dia, index) => (
+              <th key={index}>{dia}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {semanasDoMes.map((semana, index) => (
+            <tr key={index}>
+              {semana.map((dia, diaIndex) => (
+                <td key={diaIndex}>
+                  {dia && (
+                    <>
+                      <strong>{dia.getDate()}</strong>
+                      <div>
+                        {[...datasLiturgicas, ...eventos]
+                          .filter(
+                            item =>
+                              new Date(item.data).toDateString() ===
+                              dia.toDateString()
+                          )
+                          .map((evento, i) => (
+                            <div key={i}>
+                              <div> {evento.actividade}</div>
+                              <div>{evento.local}</div>
+                              <div> {evento.presidente}</div>
+                              <div>{evento.hora}</div>
+                            </div>
+                          ))}
+                      </div>
+                    </>
+                  )}
+                </td>
               ))}
             </tr>
-          </thead>
-          <tbody>
-            {semanasDoMes.map((semana, index) => (
-              <tr key={index}>
-                {semana.map((dia, diaIndex) => (
-                  <td key={diaIndex}>
-                    {dia && (
-                      <>
-                        <strong>{dia.getDate()}</strong>
-                        <div>
-                          {[...datasLiturgicas, ...novosEventos]
-                            .filter(
-                              item =>
-                                new Date(item.data).toDateString() === dia.toDateString()
-                            )
-                            .map((evento, i) => (
-                              <div key={i}>{evento.evento} ({evento.pais})</div>
-                            ))}
-                        </div>
-                      </>
-                    )}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        
-      </div>
-   
+          ))}
+        </tbody>
+      </table>     
+    </div>
   );
 };
 

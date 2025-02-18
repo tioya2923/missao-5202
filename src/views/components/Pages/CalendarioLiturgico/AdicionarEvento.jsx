@@ -1,8 +1,18 @@
-// AdicionarEvento.js
 import React, { useState } from 'react';
+import { useEventos } from './EventosContext';
 
-const AdicionarEvento = ({ adicionarEvento }) => {
-  const [novoEvento, setNovoEvento] = useState({ data: '', evento: '', pais: '' });
+
+const AdicionarEvento = () => {
+  const [novoEvento, setNovoEvento] = useState({
+    data: '',
+    actividade: '',
+    local: '',
+    presidente: '',
+    hora: ''
+  });
+
+  const { adicionarEvento } = useEventos();
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -12,12 +22,12 @@ const AdicionarEvento = ({ adicionarEvento }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     adicionarEvento(novoEvento);
-    setNovoEvento({ data: '', evento: '', pais: '' });
+    setNovoEvento({ data: '', actividade: '', local: '', presidente: '', hora: '' });
   };
 
   return (
     <div>
-      <h1>Adicionar Novo Evento</h1>
+      <h1>Actividades Episcopais e Calendário Litúrgico</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="date"
@@ -28,18 +38,34 @@ const AdicionarEvento = ({ adicionarEvento }) => {
         />
         <input
           type="text"
-          name="evento"
-          value={novoEvento.evento}
+          name="actividade"
+          value={novoEvento.actividade}
           onChange={handleInputChange}
-          placeholder="Evento"
+          placeholder="Actividade"
           required
         />
         <input
           type="text"
-          name="pais"
-          value={novoEvento.pais}
+          name="local"
+          value={novoEvento.local}
           onChange={handleInputChange}
-          placeholder="País"
+          placeholder="Local"
+          required
+        />
+        <input
+          type="text"
+          name="presidente"
+          value={novoEvento.presidente}
+          onChange={handleInputChange}
+          placeholder="Presidente"
+          required
+        />
+        <input
+          type="time"
+          name="hora"
+          value={novoEvento.hora}
+          onChange={handleInputChange}
+          placeholder="Hora"
           required
         />
         <button type="submit">Adicionar Evento</button>

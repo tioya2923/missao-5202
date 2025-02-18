@@ -10,12 +10,14 @@ import EventoCompleto from './views/components/Eventos/EventoCompleto';
 import BispoDiocese from './views/components/Pages/Arquidiocese-Huambo/Bispo-Diocese/bispo-diocese';
 import ComentarioLiturgico from './views/components/Pages/ComentarioL/ComentarioLiturgico';
 import Calendario from './views/components/Pages/CalendarioLiturgico/Calendario';
-//import AdicionarEvento from './views/components/Pages/CalendarioLiturgico/AdicionarEvento';
+import AdicionarEvento from './views/components/Pages/CalendarioLiturgico/AdicionarEvento';
+import { EventosProvider } from './views/components/Pages/CalendarioLiturgico/EventosContext';
 
 function App() {
-  return (
+  return ( 
+  <EventosProvider>
     <Router>
-      <Layout>
+      <Layout>       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/bispo-diocese" element={<BispoDiocese />} />
@@ -27,10 +29,11 @@ function App() {
           <Route path='/ComentarioLiturgico' element={<ComentarioLiturgico />} />
           <Route path='/Calendario' element={<Calendario />} />
           <Route path='/Calendario' element={<Calendario />} /> 
-          
+          <Route path='/adicionar-evento' element={<AdicionarEvento />} />
         </Routes>
       </Layout>
     </Router>
+    </EventosProvider>
   );
 }
 
