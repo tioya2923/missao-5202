@@ -12,6 +12,9 @@ import ComentarioLiturgico from './views/components/Pages/ComentarioL/Comentario
 import Calendario from './views/components/Pages/CalendarioLiturgico/Calendario';
 import AdicionarEvento from './views/components/Pages/CalendarioLiturgico/AdicionarEvento';
 import { EventosProvider } from './views/components/Pages/CalendarioLiturgico/EventosContext';
+import TodosBisposEmeritos from './views/components/Pages/Arquidiocese-Huambo/Bispos-emeritos/TodosBisposEmeritos';
+import BispoEmerito from './views/components/Pages/Arquidiocese-Huambo/Bispos-emeritos/BispoEmerito';
+
 
 function App() {
   return ( 
@@ -30,6 +33,8 @@ function App() {
           <Route path='/Calendario' element={<Calendario />} />
           <Route path='/Calendario' element={<Calendario />} /> 
           <Route path='/adicionar-evento' element={<AdicionarEvento />} />
+          <Route path='/TodosBisposEmeritos' element={<TodosBisposEmeritos />} />
+          <Route path="/bispo-emerito/:id" element={<BispoEmerito />} /> {/* Página de detalhes */}
         </Routes>
       </Layout>
     </Router>

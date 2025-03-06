@@ -57,7 +57,7 @@ const Navbar = () => {
                 <div className="dropdown">
                   <div className="dropdown-column">
                     <a href="bispo-diocese">Bispo da Diocese</a>
-                    <a href="#bispos-emeritos">Bispos Eméritos</a>
+                    <a href="TodosBisposEmeritos">Bispos Eméritos</a>
                     <a href="#clero">Clero</a>
                     <a href="#curia-arquidiocesana">Cúria Arquidiocesana</a>
                     <a href="#paroquias">Paróquias</a>
