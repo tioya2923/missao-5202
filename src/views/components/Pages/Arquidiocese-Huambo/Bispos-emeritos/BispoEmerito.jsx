@@ -19,6 +19,7 @@ const BispoEmerito = () => {
       <p><strong>Data de Ordenação Sacerdotal:</strong> {bispoEmerito.dataOrdenacaoSacerdotal}</p>
       <p><strong>Data de Ordenação Episcopal:</strong> {bispoEmerito.dataOrdenacaoEpiscopal}</p>
       <p><strong>Contactos:</strong> {bispoEmerito.contactos}</p>
+      <p><strong>Email:</strong> {bispoEmerito.email}</p>
       <h2>Nomeações</h2>
       <ul>
         {bispoEmerito.nomeacoes.map((nomeacao, index) => (

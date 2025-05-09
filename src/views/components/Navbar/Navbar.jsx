@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import logo from '../Logo/logo.png';
+import logo from '../Logo/logo_missio.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,22 +58,21 @@ const Navbar = () => {
                   <div className="dropdown-column">
                     <a href="bispo-diocese">Bispo da Diocese</a>
                     <a href="TodosBisposEmeritos">Bispos Eméritos</a>
-                    <a href="#clero">Clero</a>
-                    <a href="#curia-arquidiocesana">Cúria Arquidiocesana</a>
-                    <a href="#paroquias">Paróquias</a>
-                    <a href="#missoes">Missões</a>
-                    <a href="#boletim-arquidiocesano">Boletim Arquidiocesano</a>
+                    <a href="clero">Clero</a>
+                    <a href="curia-arquidiocesana">Cúria Arquidiocesana</a>
+                    <a href="paroquias">Paróquias e Missões</a>
+                    <a href="boletim-arquidiocesano">Boletim Arquidiocesano</a>
                   </div>
                   <div className="dropdown-column">
-                    <a href="#seminarios">Seminários</a>
-                    <a href="#comunidades-religiosas">Comunidades Religiosas</a>
+                    <a href="seminarios">Seminários</a>
+                    <a href="comunidades-religiosas">Comunidades Religiosas</a>
                   </div>
                   <div className="dropdown-column">
-                    <a href="#movimentos-apostolado">Movimentos de Apostolado</a>
-                    <a href="#associacoes-religiosas">Associações Religiosas</a>
+                    <a href="movimentos-apostolado">Movimentos de Apostolado</a>
+                    <a href="associacoes-religiosas">Associações Religiosas</a>
                   </div>
                   <div className="dropdown-column">
-                    <a href="#escolas-catolicas">Escolas Católicas</a>
+                    <a href="escolas-catolicas">Escolas Católicas</a>
                     <a href="#historia">História</a>
                   </div>
                 </div>
@@ -91,12 +90,8 @@ const Navbar = () => {
 
 
                     <a href="/Calendario">Calendário Litúrgico</a>
-                    <a href="/ComentarioLiturgico">Comentário à Liturgia</a>
-                  </div>
-                  <div className="dropdown-column">
-                    <a href="#lectio-divina">Lectio Divina</a>              
-                    <a href="#santo-rosario">Santo Rosário</a>
-                  </div>
+                    <a href="/ComentarioLiturgico">Comentário à Liturgia</a>                  </div>
+
 
                   <div className="dropdown-column">
                     <a href="#canticos-pt">Cânticos em Português</a>
@@ -120,7 +115,6 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <a href="#e-servicos" className="navbar-line-two">Formação</a>
             <a href="#pesquisa-inovacao" className="navbar-line-two">A MH</a>
             <a href="#contacto" className="navbar-line-two">Contacto</a>
           </div>

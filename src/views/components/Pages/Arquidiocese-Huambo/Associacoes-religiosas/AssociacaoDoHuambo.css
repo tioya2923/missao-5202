@@ -1,0 +1,19 @@
+.container-associacao {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-associacao h1 {
+    text-align: center;
+}
+
+.container-associacao h2 {
+    text-align: center;
+}
+
+.associacao-historia {
+    text-align: justify;
+    line-height: 1.5; 
+}

@@ -36,9 +36,7 @@ const PdfItem = ({ file }) => {
           <a href={file.url} target="_blank" rel="noopener noreferrer" className="pdf-view">
             Abrir
           </a>
-          <a href={file.url} download className="pdf-download">
-            Baixar
-          </a>
+          <a href={file.url} download className="pdf-download">Baixar</a>
         </div>
       </div>
     </div>

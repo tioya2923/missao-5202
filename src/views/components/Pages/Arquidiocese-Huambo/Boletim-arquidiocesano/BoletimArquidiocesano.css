@@ -1,0 +1,74 @@
+.boletim-arquidiocesano {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-boletim {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.boletim-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.pdf-boletim {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.boletin-info {
+    padding: 10px;
+}
+
+.boletim-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.boletim-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.boletim-view, .boletim-download {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boletim-view {
+    background-color: #2c2d2d;
+}
+
+.boletim-view:hover {
+    background-color: #7a7c7e;
+}
+
+.boletim-download {
+    background-color: #7a7c7e;
+}
+
+.boletim-download:hover {
+    background-color: #2c2d2d;
+}

@@ -1,0 +1,18 @@
+.container-movimento {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-movimento h1 {
+    text-align: center;
+}
+.container-movimento h2 {
+    text-align: justify;
+}
+
+.movimento-historia {
+    text-align: justify;
+    line-height: 1.5;
+}
